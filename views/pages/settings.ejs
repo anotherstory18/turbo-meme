@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="glass">
+  <h3>Demo Data Overview</h3>
+  <p>Users: <%= data.users.length %> · Patients: <%= data.patients.length %> · Doctors: <%= data.doctors.length %></p>
+  <p>Bills: <%= data.bills.length %> · Receipts: <%= data.receipts.length %></p>
+  <form method="post" action="/settings/seed"><button class="btn">Re-apply Seed Data (placeholder)</button></form>
+</section>
+<%- include('../partials/app-shell-end') %>

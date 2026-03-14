@@ -1,0 +1,7 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<div class="glass"><input id="searchPatients" placeholder="Search patient by name/token/department"/></div>
+<div class="table glass"><table><thead><tr><th>Token</th><th>Name</th><th>Department</th><th>Emergency</th></tr></thead><tbody id="patientTable">
+<% patients.forEach(p=>{ %><tr><td><%= p.token %></td><td><%= p.fullName %></td><td><%= p.department %></td><td><span class="badge <%= p.emergency==='Yes'?'alert':'' %>"><%= p.emergency %></span></td></tr><% }) %>
+</tbody></table></div>
+<%- include('../partials/app-shell-end') %>

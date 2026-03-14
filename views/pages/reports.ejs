@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="charts-grid">
+  <div class="glass chart"><canvas id="patientTrend"></canvas></div>
+  <div class="glass chart"><canvas id="doctorLoad"></canvas></div>
+  <div class="glass chart"><canvas id="revenueTrend"></canvas></div>
+</section>
+<script>window.reportData=<%- JSON.stringify(data) %></script>
+<%- include('../partials/app-shell-end') %>

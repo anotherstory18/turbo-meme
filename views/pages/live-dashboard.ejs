@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="monitor-grid">
+  <div class="glass giant"><h3>Active Token Stream</h3><div id="liveToken">--</div></div>
+  <div class="glass"><h3>Total Waiting</h3><p class="metric" data-count="<%= stats.waiting %>">0</p></div>
+  <div class="glass"><h3>Doctors Available</h3><p><%= data.doctors.filter(d=>d.status==='Available').length %></p></div>
+  <div class="glass"><h3>ICU Availability</h3><p><%= data.beds.icuAvailable %>/<%= data.beds.icuBeds %></p></div>
+  <div class="glass"><h3>Emergency Beds</h3><p><%= data.beds.emergencyAvailable %>/<%= data.beds.emergencyBeds %></p></div>
+  <div class="glass"><h3>Alerts</h3><p class="<%= data.beds.availableBeds<10?'text-alert':'' %>"><%= data.beds.availableBeds<10?'Beds running low':'All systems stable' %></p></div>
+</section>
+<%- include('../partials/app-shell-end') %>

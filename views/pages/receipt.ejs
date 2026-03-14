@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<form class="glass form-grid" method="post" action="/receipts">
+<select name="patientId"><% patients.forEach(p=>{ %><option value="<%= p.id %>"><%= p.fullName %></option><% }) %></select>
+<select name="billId"><% bills.forEach(b=>{ %><option value="<%= b.id %>"><%= b.id %> - ₹<%= b.grandTotal %></option><% }) %></select>
+<input name="amountPaid" placeholder="Amount Paid" type="number" required />
+<select name="paymentMode"><option>UPI</option><option>Cash</option><option>Card</option></select>
+<select name="paymentStatus"><option>Paid</option><option>Pending</option></select>
+<button class="btn primary">Create Receipt</button>
+</form>
+<section class="table glass"><h3>Receipts</h3><table><thead><tr><th>Receipt #</th><th>Patient</th><th>Paid</th><th>Status</th></tr></thead><tbody>
+<% receipts.forEach(r=>{ %><tr><td><%= r.receiptNo %></td><td><%= r.patientId %></td><td>₹<%= r.amountPaid %></td><td><span class="badge success"><%= r.paymentStatus %></span></td></tr><% }) %>
+</tbody></table></section>
+<%- include('../partials/app-shell-end') %>

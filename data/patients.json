@@ -1,0 +1,4 @@
+[
+  {"id":"PAT-1001","fullName":"Ananya Rao","age":"29","gender":"Female","phone":"9990011223","address":"Indiranagar","symptoms":"Fever, fatigue","department":"General OPD","emergency":"No","token":"GEN-001","createdAt":"2026-01-03T10:11:00.000Z"},
+  {"id":"PAT-1002","fullName":"Kabir Singh","age":"54","gender":"Male","phone":"9990056789","address":"Whitefield","symptoms":"Chest pain","department":"Cardiology","emergency":"Yes","token":"CAR-001","createdAt":"2026-01-03T10:14:00.000Z"}
+]

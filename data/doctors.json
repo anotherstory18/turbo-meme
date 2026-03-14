@@ -1,0 +1,6 @@
+[
+  {"id":"D1","name":"Dr. Aisha Verma","specialization":"General Medicine","department":"General OPD","room":"A-101","shift":"8AM - 2PM","status":"Available"},
+  {"id":"D2","name":"Dr. Rohan Iyer","specialization":"Pediatrics","department":"Pediatrics","room":"B-202","shift":"9AM - 3PM","status":"Busy"},
+  {"id":"D3","name":"Dr. Mia Thomas","specialization":"Cardiology","department":"Cardiology","room":"C-308","shift":"10AM - 6PM","status":"Off Duty"},
+  {"id":"D4","name":"Dr. Karan Shah","specialization":"Neurology","department":"Neurology","room":"D-110","shift":"8AM - 4PM","status":"Available"}
+]

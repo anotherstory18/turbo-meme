@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<section class="auth-wrap">
+  <form class="glass auth-card" method="post" action="/login">
+    <h2>Welcome to MediFlow AI</h2>
+    <p>Hospital Intelligence Cloud (Local Demo)</p>
+    <% if (error) { %><div class="alert error"><%= error %></div><% } %>
+    <input name="username" placeholder="Username" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <select name="role" required>
+      <option value="">Select role</option>
+      <option>Admin</option><option>Receptionist</option><option>Doctor</option>
+    </select>
+    <button class="btn primary" type="submit">Sign In</button>
+    <small>Demo: admin/admin123, recep/recep123, doctor/doctor123</small>
+  </form>
+</section>
+<script src="/js/app.js"></script>
+</body></html>

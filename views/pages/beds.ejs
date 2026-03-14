@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="stats-grid">
+  <div class="glass card"><h3>Total Beds</h3><p><%= beds.totalBeds %></p></div>
+  <div class="glass card"><h3>Available</h3><p class="text-success"><%= beds.availableBeds %></p></div>
+  <div class="glass card"><h3>Occupied</h3><p><%= beds.occupiedBeds %></p></div>
+  <div class="glass card"><h3>Emergency</h3><p><%= beds.emergencyAvailable %>/<%= beds.emergencyBeds %></p></div>
+</section>
+<form class="glass form-grid" method="post" action="/beds">
+  <input name="totalBeds" value="<%= beds.totalBeds %>" type="number"/><input name="availableBeds" value="<%= beds.availableBeds %>" type="number"/><input name="occupiedBeds" value="<%= beds.occupiedBeds %>" type="number"/>
+  <input name="icuBeds" value="<%= beds.icuBeds %>" type="number"/><input name="icuAvailable" value="<%= beds.icuAvailable %>" type="number"/><input name="emergencyBeds" value="<%= beds.emergencyBeds %>" type="number"/><input name="emergencyAvailable" value="<%= beds.emergencyAvailable %>" type="number"/><input name="wardBeds" value="<%= beds.wardBeds %>" type="number"/><input name="wardAvailable" value="<%= beds.wardAvailable %>" type="number"/>
+  <button class="btn primary">Update Bed Status</button>
+</form>
+<%- include('../partials/app-shell-end') %>

@@ -1,0 +1,3 @@
+[
+  {"id":"RCPT-1","receiptNo":"MFA-45129","patientId":"PAT-1001","billId":"BILL-1","amountPaid":840,"paymentMode":"UPI","paymentStatus":"Paid","createdAt":"2026-01-03T11:03:00.000Z"}
+]
