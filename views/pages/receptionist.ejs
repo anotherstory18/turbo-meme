@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="quick-actions glass">
+  <a class="btn primary" href="/patients/register">+ Register Patient</a>
+  <a class="btn" href="/billing">Create Bill</a>
+  <a class="btn" href="/receipts">Generate Receipt</a>
+</section>
+<section class="stats-grid">
+  <div class="card glass"><h3>Today's Registrations</h3><p class="metric" data-count="<%= stats.todayPatients %>">0</p></div>
+  <div class="card glass"><h3>Queue Waiting</h3><p class="metric" data-count="<%= stats.waiting %>">0</p></div>
+</section>
+<%- include('../partials/app-shell-end') %>

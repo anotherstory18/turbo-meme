@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="glass">
+  <div class="row-between"><h3>Smart OPD Queue Board</h3><form method="post" action="/queue/next"><button class="btn primary">Call Next Patient</button></form></div>
+  <div id="queueBoard" class="queue-list">
+    <% queue.forEach(q=>{ %>
+      <div class="queue-item" data-id="<%= q.id %>"><span><%= q.token %> · <%= q.name %> · <%= q.department %> · ETA <%= q.eta %>m</span><span class="badge <%= q.status %>"><%= q.status %></span></div>
+    <% }) %>
+  </div>
+</section>
+<%- include('../partials/app-shell-end') %>

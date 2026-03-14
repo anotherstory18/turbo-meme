@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="stats-grid">
+  <div class="card glass"><h3>Patients Today</h3><p class="metric" data-count="<%= stats.todayPatients %>">0</p></div>
+  <div class="card glass"><h3>Queue Load</h3><p class="metric" data-count="<%= stats.waiting %>">0</p></div>
+  <div class="card glass"><h3>Doctors Active</h3><p class="metric" data-count="<%= stats.activeDoctors %>">0</p></div>
+  <div class="card glass"><h3>Bed Occupancy</h3><p class="metric" data-count="<%= stats.occupancy %>">0</p><span>%</span></div>
+  <div class="card glass"><h3>Emergency Cases</h3><p class="metric" data-count="<%= stats.emergencyCases %>">0</p></div>
+  <div class="card glass"><h3>Revenue Today</h3><p>₹<%= stats.revenue.toFixed(2) %></p></div>
+</section>
+<section class="charts-grid">
+  <div class="glass chart"><canvas id="trendChart"></canvas></div>
+  <div class="glass chart"><canvas id="deptChart"></canvas></div>
+  <div class="glass chart"><canvas id="bedChart"></canvas></div>
+</section>
+<section class="glass timeline"><h3>Recent Activity</h3><ul>
+  <% data.patients.slice(0,5).forEach(p=> { %><li><b><%= p.fullName %></b> registered in <%= p.department %> · token <%= p.token %></li><% }) %>
+</ul></section>
+<script>window.dashboardData=<%- JSON.stringify(data) %></script>
+<%- include('../partials/app-shell-end') %>

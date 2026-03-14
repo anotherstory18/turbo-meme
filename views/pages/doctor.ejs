@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="glass">
+  <h3>Today's Queue</h3>
+  <div class="queue-list">
+  <% queue.forEach(q=> { %>
+    <div class="queue-item"><span><%= q.token %> · <%= q.name %></span><span class="badge <%= q.status %>"><%= q.status %></span></div>
+  <% }) %>
+  </div>
+</section>
+<section class="glass"><h3>Consultation Notes</h3>
+  <% if(!notes.length){ %><p class="muted">No notes yet.</p><% } %>
+</section>
+<%- include('../partials/app-shell-end') %>

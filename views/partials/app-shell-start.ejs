@@ -1,0 +1,22 @@
+<div class="app-shell">
+  <aside class="sidebar glass">
+    <div class="brand">⚕️ MediFlow AI</div>
+    <nav>
+      <a href="/admin" class="<%= currentPath==='/admin'?'active':'' %>">Dashboard</a>
+      <a href="/live" class="<%= currentPath==='/live'?'active':'' %>">Live Ops</a>
+      <a href="/patients/register" class="<%= currentPath==='/patients/register'?'active':'' %>">Register</a>
+      <a href="/patients" class="<%= currentPath==='/patients'?'active':'' %>">Patients</a>
+      <a href="/queue" class="<%= currentPath==='/queue'?'active':'' %>">Queue</a>
+      <a href="/doctors" class="<%= currentPath==='/doctors'?'active':'' %>">Doctors</a>
+      <a href="/beds" class="<%= currentPath==='/beds'?'active':'' %>">Beds</a>
+      <a href="/billing" class="<%= currentPath==='/billing'?'active':'' %>">Billing</a>
+      <a href="/receipts" class="<%= currentPath==='/receipts'?'active':'' %>">Receipts</a>
+      <a href="/reports" class="<%= currentPath==='/reports'?'active':'' %>">Reports</a>
+      <a href="/settings" class="<%= currentPath==='/settings'?'active':'' %>">Settings</a>
+    </nav>
+  </aside>
+  <main class="main-content">
+    <header class="topbar glass">
+      <h1><%= title %></h1>
+      <div id="liveClock"></div>
+    </header>

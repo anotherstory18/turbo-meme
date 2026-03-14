@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<section class="doctor-cards">
+<% doctors.forEach(d=>{ %>
+  <article class="glass doctor-card">
+    <div class="avatar"><%= d.name.split(' ').map(s=>s[0]).join('') %></div>
+    <h3><%= d.name %></h3><p><%= d.specialization %> · <%= d.department %></p><p>Room: <%= d.room %> · Shift: <%= d.shift %></p>
+    <span class="badge <%= d.status==='Available'?'success':d.status==='Busy'?'busy':'off' %>"><%= d.status %></span>
+  </article>
+<% }) %>
+</section>
+<%- include('../partials/app-shell-end') %>

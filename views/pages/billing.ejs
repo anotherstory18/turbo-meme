@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<%- include('../partials/app-shell-start') %>
+<form class="glass form-grid" method="post" action="/billing">
+<select name="patientId"><% patients.forEach(p=>{ %><option value="<%= p.id %>"><%= p.fullName %> (<%= p.token %>)</option><% }) %></select>
+<input name="consultation" placeholder="Consultation Fee" type="number"/>
+<input name="medicine" placeholder="Medicine Charges" type="number"/>
+<input name="lab" placeholder="Lab Charges" type="number"/>
+<input name="bed" placeholder="Bed Charges" type="number"/>
+<input name="emergency" placeholder="Emergency Charges" type="number"/>
+<input name="other" placeholder="Other Charges" type="number"/>
+<input name="tax" placeholder="Tax" type="number"/>
+<button class="btn primary">Generate Bill</button>
+</form>
+<section class="table glass"><h3>Billing History</h3><table><thead><tr><th>Bill</th><th>Patient</th><th>Total</th></tr></thead><tbody>
+<% bills.forEach(b=>{ %><tr><td><%= b.id %></td><td><%= b.patientId %></td><td>₹<%= b.grandTotal %></td></tr><% }) %>
+</tbody></table></section>
+<%- include('../partials/app-shell-end') %>

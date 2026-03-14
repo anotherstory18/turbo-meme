@@ -1,0 +1,4 @@
+[
+  {"id":"Q1","patientId":"PAT-1001","name":"Ananya Rao","department":"General OPD","token":"GEN-001","emergency":"No","status":"waiting","eta":15},
+  {"id":"Q2","patientId":"PAT-1002","name":"Kabir Singh","department":"Cardiology","token":"CAR-001","emergency":"Yes","status":"called","eta":5}
+]

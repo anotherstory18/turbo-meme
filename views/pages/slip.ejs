@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+<section class="receipt-page">
+  <article class="glass receipt-card">
+    <h2>OPD Slip</h2>
+    <p>ID: <%= patient.id %></p><p>Name: <%= patient.fullName %></p><p>Department: <%= patient.department %></p><p>Token: <b><%= patient.token %></b></p>
+    <button class="btn primary" onclick="window.print()">Print Slip</button>
+  </article>
+</section>
+</body></html>
